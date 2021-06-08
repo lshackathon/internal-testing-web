@@ -1,0 +1,44 @@
+@{
+  bool result = await this.Model.Process();
+  if (!result)
+  {
+    IgnoreBody();
+    IgnoreSection("Content");
+    return;
+  }
+}
+<!DOCTYPE html>
+<html lang="@this.Model.Language">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@this.Model.Title</title>
+    @foreach (string css in this.Model.DesignServiceData.cssList)
+    {
+        <link rel="stylesheet" href='@css' />
+    }   
+    <link rel="icon" href="@this.Model.DesignServiceData.favIcon" />
+</head>
+<body id="mb">
+
+  @Html.Raw(this.Model.DesignServiceData.headerHTML)
+
+  @RenderBody()
+  @RenderSection("Content")
+
+  <div id="root"></div>
+
+  @Html.Raw(this.Model.DesignServiceData.scriptContent)
+
+  @{
+    if (this.Model.Scripts != null)
+    {
+      foreach (string script in this.Model.Scripts)
+      {
+        <script src="@script"></script>
+      }
+    }
+  }
+
+</body>
+</html>

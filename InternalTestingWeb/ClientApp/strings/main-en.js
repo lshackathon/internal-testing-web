@@ -1,0 +1,36 @@
+﻿const string_table = {
+  APP_NAVCOUNTER: 'Counter',
+  APP_NAVDEBUG: 'Debug',
+  APP_NAVFETCH: 'Fetch Data',
+  APP_NAVFORM: 'Form',
+  APP_NAVHOME: 'Home',
+  APP_NAVPROFILE: 'Profile',
+
+  COUNTER_ADD: 'Add Counter',
+  COUNTER_CONTENT: 'Current Count',
+  COUNTER_DOCTITLE: 'You clicked ${count} times',
+  COUNTER_HEADER: 'Counter',
+
+  FORM_LASTNAME: 'Last Name',
+  FORM_NAME: 'Name',
+  FORM_REQUIRED: 'This field is required',
+  FORM_SUBMIT: 'Submit',
+
+  HOME_ALERT: 'This is some subtle alert content',
+  HOME_HEADER: 'Hello, world',
+  HOME_SHOWALERT: 'Show Alert',
+  HOME_TEXT1: 'This application demonstrates several things',
+  HOME_TEXT2: 'It is a .net application using the Design Service for rendering the core page',
+  HOME_TEXT3: 'It also contains a React application rendering the content of the page',
+  HOME_TEXT4: 'It also uses several controls and demonstrates localization',
+  HOME_WELCOME: 'Welcome to your new single - page application',
+
+  WEATHER_DATE: 'Date',
+  WEATHER_DESCRIPTION: 'This component demonstrates fetching data from the server.',
+  WEATHER_ERROR: 'Error fetching data',
+  WEATHER_HEADER: 'Weather forecast',
+  WEATHER_REFRESH: 'Refresh',
+  WEATHER_SUMMARY: 'Summary',
+  WEATHER_TEMPC: 'Temp (c)',
+  WEATHER_TEMPF: 'Temp (f)',
+};

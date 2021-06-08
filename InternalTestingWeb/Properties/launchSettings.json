@@ -1,0 +1,33 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://hello.dev-legalshield.com:21344",
+      "sslPort": 44330
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "LS_ENV": "dev",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "InternalTestingWeb": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "APP_SUBDOMAIN": "hello",
+        "DESIGN_SERVICE_URI": "https://design.api.dev-legalshield.com",
+        "LS_ENV": "dev",
+        "LOGIN_UX_URI": "https://login.dev-legalshield.com",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "IDENTITIES_SERVICE_URI": "https://identities.api.dev-legalshield.com"
+      },
+      "applicationUrl": "https://localhost:3401;http://localhost:3400"
+    }
+  }
+}

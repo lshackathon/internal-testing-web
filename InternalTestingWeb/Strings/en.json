@@ -1,0 +1,8 @@
+﻿{
+  "TITLE": "Example App",
+
+  "ERROR_TITLE": "Error",
+  "ERROR_CONTENT": "An error occured processing your request.",
+
+  "DEBUG_TITLE":  "Debug/Diagnostics"
+}

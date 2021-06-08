@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ClientApp>ClientApp\</ClientApp>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot" />
+    <Folder Include="Controllers\v1\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Themis.Core" Version="0.0.44" />
+  </ItemGroup>
+
+  <Target Name="BuildClientApp" AfterTargets="Build">
+    <Exec WorkingDirectory="$(ClientApp)" Command="npm install" />
+    <Exec WorkingDirectory="$(ClientApp)" Command="npm run webpack" />
+  </Target>
+
+</Project>

@@ -1,0 +1,74 @@
+{
+  "name": "legalshield",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@legalshield/adonis-ux-framework": "^1.7.2",
+    "axios": "^0.21.1",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.22",
+    "@types/js-cookie": "^2.2.6",
+    "@types/node": "^14.14.35",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router-dom": "^5.1.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.2",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "jest-css-modules-transform": "^4.2.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "webpack": "webpack",
+    "dev:webpack": "webpack -w",
+    "test": "react-scripts test",
+    "autolint": "eslint --fix . && ./node_modules/.bin/stylelint --fix \"**/*.scss\"",
+    "lint": "eslint ./src/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

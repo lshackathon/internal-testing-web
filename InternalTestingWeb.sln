@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalTestingWeb", "InternalTestingWeb\InternalTestingWeb.csproj", "{7C200FA5-E546-4189-B8B4-28B950DD6E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalTestingWeb.Tests", "InternalTestingWeb.Tests\InternalTestingWeb.Tests.csproj", "{33E01715-8D46-46AE-973D-E776374DC484}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C200FA5-E546-4189-B8B4-28B950DD6E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C200FA5-E546-4189-B8B4-28B950DD6E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C200FA5-E546-4189-B8B4-28B950DD6E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C200FA5-E546-4189-B8B4-28B950DD6E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E01715-8D46-46AE-973D-E776374DC484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E01715-8D46-46AE-973D-E776374DC484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E01715-8D46-46AE-973D-E776374DC484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E01715-8D46-46AE-973D-E776374DC484}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

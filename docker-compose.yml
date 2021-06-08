@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  adonis_login_service:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - GIT_USERNAME=${GIT_USERNAME}
+        - GIT_PERSONAL_ACCESS_TOKEN=${GIT_PERSONAL_ACCESS_TOKEN}
+    ports:
+      - "3400:80"
+    container_name: adonis_login_service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - IdentitiesServiceURI=https://identities-service-sandbox-us.app.pplsicorp.com
+      - DESIGN_SERVICE_URI=https://design.api.dev-legalshield.com
+      - apiUUID=3a3d22ac-e7cc-11ea-adc1-0242ac120002
+      - apiSecret=4a47c6de-e7cc-11ea-adc1-0242ac120002

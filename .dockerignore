@@ -1,0 +1,4 @@
+./InternalTestingWeb/obj/
+./InternalTestingWeb/bin/
+./InternalTestingWeb/ClientApp/node_modules/
+./docker-compose.yml

@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/InternalTestingWeb/InternalTestingWeb.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/InternalTestingWeb/InternalTestingWeb.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "isBackground": true,
+            "command": "cd ${workspaceFolder}/InternalTestingWeb/ClientApp && npm run dev:webpack",
+            "problemMatcher": []
+        },
+        {
+            "label": "lint",
+            "type": "shell",
+            "isBackground": true,
+            "command": "cd ${workspaceFolder}/InternalTestingWeb/ClientApp && npm run lint",
+            "problemMatcher": []
+        }
+    ]
+}
