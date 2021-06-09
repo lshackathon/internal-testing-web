@@ -10,6 +10,9 @@ import {
   Input,
   Dropdown,
   Radio,
+  LinkContent,
+  Select,
+  TextArea,
 } from '@legalshield/adonis-ux-framework';
 import { FormProvider, useForm } from 'react-hook-form';
 import { saveTestCase } from '../../services/utils';
@@ -21,6 +24,10 @@ const AddTestCase: React.FC = () => {
     console.log(e);
     e.status = 'not run';
     saveTestCase(e);
+    window.location.href = '/';
+  };
+
+  const handleCancelButtonClick = () => {
     window.location.href = '/';
   };
 
@@ -49,17 +56,51 @@ const AddTestCase: React.FC = () => {
                   <Radio rightLabel="UAT" {...register('environment')} value="uat" />
                   <Radio rightLabel="Production" {...register('environment')} value="production" />
                 </FormField>
-                <FormField id="project" label="Project">
-                  <Input
-                    placeholder="Project"
+                <FormField classNames={[]} id="base-select" label="Project">
+                  <Select
                     {...register('project', {
                       required: 'Must provide a project',
                     })}
+                    options={[
+                      {
+                        label: 'Login',
+                        value: 'login',
+                      },
+                      {
+                        label: 'Wals',
+                        value: 'wals',
+                      },
+                      {
+                        label: 'D2C',
+                        value: 'd2c',
+                      },
+                    ]}
                   />
+                </FormField>
+                <FormField classNames={[]} id="base-text-area" label="Test steps">
+                  <TextArea 
+                    placeholder="1. Log in user..."
+                    rows={5}
+                    {...register('testSteps', {
+                      required: 'Must provide test steps',
+                    })}/>
                 </FormField>
                 <Button classNames={['mt-5']} label="Add test case" stretch type="submit" />
               </Form>
             </FormProvider>
+          </GridCol>
+        </GridRow>
+        <GridRow variant="plain">
+          <GridCol>
+            <Button
+              classNames={[]}
+              label="Cancel adding test case"
+              textSize="body"
+              type="button"
+              variant="destructive"
+              onClick={handleCancelButtonClick}
+              stretch
+            />
           </GridCol>
         </GridRow>
       </Grid>

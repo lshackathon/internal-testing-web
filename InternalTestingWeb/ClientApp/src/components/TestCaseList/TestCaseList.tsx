@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, GridCol, GridRow, Button, Heading, Table, TableCell, TableRow } from '@legalshield/adonis-ux-framework';
+import { Grid, GridCol, GridRow, Button, Heading, Table, TableCell, TableRow, Accordion } from '@legalshield/adonis-ux-framework';
 import { getTestCases } from '../../services/utils';
 
 const TestCaseList: React.FC = () => {
@@ -11,6 +11,10 @@ const TestCaseList: React.FC = () => {
 
   const handleAddButtonClick = () => {
     window.location.href = '/add';
+  };
+
+  const handleShowStepsButton = (e) => {
+    console.log(e);
   };
 
   return (
@@ -34,22 +38,29 @@ const TestCaseList: React.FC = () => {
           </GridCol>
           <GridCol>
             {/* table of test cases */}
-
             <Table classNames={[]} noBorder>
               <TableRow isHeader>
                 <TableCell>Test case name</TableCell>
                 <TableCell>Status</TableCell>
+                <TableCell>Test steps</TableCell>
                 <TableCell>Project</TableCell>
+                <TableCell>Environment</TableCell>
               </TableRow>
               {items.map((item, index) => {
                 return (
                   <>
-                    <TableRow>
+                    <TableRow key={index}>
                       <TableCell>{item.name}</TableCell>
                       <TableCell>{item.status}</TableCell>
+                      <TableCell>
+                        <Accordion childrenBackground="gray" classNames={[]} title="Test steps">
+                          {item.testSteps}
+                        </Accordion>
+                      </TableCell>
                       <TableCell>{item.project}</TableCell>
+                      <TableCell>{item.environment}</TableCell>
                     </TableRow>
-                </>
+                  </>
                 );
               })}
             </Table>
