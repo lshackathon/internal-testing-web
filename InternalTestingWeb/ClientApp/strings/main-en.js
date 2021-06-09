@@ -3,8 +3,8 @@
   APP_NAVDEBUG: 'Debug',
   APP_NAVFETCH: 'Fetch Data',
   APP_NAVFORM: 'Form',
-  APP_NAVHOME: 'Home',
-  APP_NAVPROFILE: 'Profile',
+  APP_NAVHOME: 'Test cases',
+  APP_NAVPROFILE: 'Profilez',
 
   COUNTER_ADD: 'Add Counter',
   COUNTER_CONTENT: 'Current Count',

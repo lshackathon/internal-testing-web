@@ -4,10 +4,11 @@ import { Route, Switch } from 'react-router';
 import { Footer, Layout, Navigation, NavigationItem, useViewportSize } from '@legalshield/adonis-ux-framework';
 import FetchData from '../Weather/FetchData';
 import Counter from '../Counter/Counter';
-import Home from '../Home/Home';
+import TestCaseList from '../TestCaseList/TestCaseList';
 import JSDebug from '../JSDebug/JSDebug';
 import Profile from '../Profile/Profile';
 import { EditForm } from '../EditForm/EditForm';
+import AddTestCase from '../AddTestCase/AddTestCase';
 
 export const App: React.FC = () => {
   // State that indicates the slideout is open
@@ -44,11 +45,11 @@ export const App: React.FC = () => {
   // This is the main navigation menu
   const navigationItems = [
     { data: '/', iconName: 'nav_home', id: 0, name: string_table.APP_NAVHOME },
-    { data: '/counter', iconName: 'action_add', id: 1, name: string_table.APP_NAVCOUNTER },
-    { data: '/fetch-data', iconName: 'object_data', id: 2, name: string_table.APP_NAVFETCH },
-    { data: '/profile', iconName: 'action_user_single', id: 3, name: string_table.APP_NAVPROFILE },
-    { data: '/jsdebug', iconName: 'action_eye_open', id: 3, name: string_table.APP_NAVDEBUG },
-    { data: '/form', iconName: 'action_edit', id: 4, name: string_table.APP_NAVFORM },
+    // { data: '/counter', iconName: 'action_add', id: 1, name: string_table.APP_NAVCOUNTER },
+    // { data: '/fetch-data', iconName: 'object_data', id: 2, name: string_table.APP_NAVFETCH },
+    // { data: '/profile', iconName: 'action_user_single', id: 3, name: string_table.APP_NAVPROFILE },
+    // { data: '/jsdebug', iconName: 'action_eye_open', id: 3, name: string_table.APP_NAVDEBUG },
+    // { data: '/form', iconName: 'action_edit', id: 4, name: string_table.APP_NAVFORM },
   ];
 
   // The core page use our main layout component, containing our navigation.
@@ -72,12 +73,13 @@ export const App: React.FC = () => {
     >
       <div>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/counter" component={Counter} />
+          <Route exact path="/" component={TestCaseList} />
+          <Route exact path="/add" component={AddTestCase} />
+          {/* <Route path="/counter" component={Counter} />
           <Route path="/fetch-data" component={FetchData} />
           <Route path="/jsdebug" component={JSDebug} />
           <Route path="/profile" component={Profile} />
-          <Route path="/form" component={EditForm} />
+          <Route path="/form" component={EditForm} /> */}
         </Switch>
       </div>
       <Footer brandName={brandName}></Footer>

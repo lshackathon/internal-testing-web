@@ -10,7 +10,7 @@ const JSDebug: React.FC = () => {
     <Grid>
       <GridRow variant="plain">
         <GridCol>
-          <h1>Javascript Variables</h1>
+          <h1>Javascript vars</h1>
           <div>
             <h2>brandName</h2>
             {brandName}
@@ -27,7 +27,7 @@ const JSDebug: React.FC = () => {
             <h2>string_table</h2>
             <pre>{JSON.stringify(string_table, null, 2)}</pre>
           </div>
-          <div>
+          <div>Can 
             <h2>string_table_market</h2>
             <pre>{JSON.stringify(string_table_market, null, 2)}</pre>
           </div>
